@@ -65,10 +65,9 @@ let jobs = [
   },
 ];
 
-// ====== State ======
 let activeTab = "ALL";
 
-// ====== Elements ======
+
 const totalCountEl = document.getElementById("totalCount");
 const interviewCountEl = document.getElementById("interviewCount");
 const rejectedCountEl = document.getElementById("rejectedCount");
