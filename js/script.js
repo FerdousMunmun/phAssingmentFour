@@ -79,9 +79,9 @@ const tabAllBtn = document.getElementById("tabAll");
 const tabInterviewBtn = document.getElementById("tabInterview");
 const tabRejectedBtn = document.getElementById("tabRejected");
 
-// ====== Helpers ======
+
 function setActiveButton() {
-  // Reset styles (simple)
+  
   tabAllBtn.classList.remove("bg-blue-600", "text-white");
   tabInterviewBtn.classList.remove("bg-blue-600", "text-white");
   tabRejectedBtn.classList.remove("bg-blue-600", "text-white");
@@ -90,7 +90,7 @@ function setActiveButton() {
   tabInterviewBtn.classList.add("bg-white", "text-[#64748B]");
   tabRejectedBtn.classList.add("bg-white", "text-[#64748B]");
 
-  // Active
+  
   if (activeTab === "ALL") {
     tabAllBtn.classList.remove("bg-white", "text-[#64748B]");
     tabAllBtn.classList.add("bg-blue-600", "text-white");
@@ -179,7 +179,7 @@ function renderAll() {
   renderJobs();
 }
 
-// ====== Events ======
+
 tabAllBtn.addEventListener("click", () => {
   activeTab = "ALL";
   renderAll();
@@ -195,7 +195,7 @@ tabRejectedBtn.addEventListener("click", () => {
   renderAll();
 });
 
-// Event Delegation for buttons inside cards
+
 jobsContainer.addEventListener("click", (e) => {
   const btn = e.target.closest("button");
   if (!btn) return;
@@ -220,5 +220,5 @@ jobsContainer.addEventListener("click", (e) => {
   renderAll();
 });
 
-// ====== Init ======
+
 renderAll();
